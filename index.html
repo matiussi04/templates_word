@@ -11,6 +11,30 @@
     </style>
   </head>
   <body>
+    <form onsubmit="processForm(event)">
+      <div class="title">
+        <label for="title">Titulo</label>
+        <input type="text" name="title" id="title" />
+      </div>
+      <div class="justify">
+        <label for="justify">Justificativa</label>
+        <textarea name="justify" id="" cols="30"></textarea>
+      </div>
+      <div id="itens">
+        <div class="item">
+          <label for="item-1">Item 1:</label>
+          <input type="text" id="item-1" name="itens[]" required />
+        </div>
+      </div>
+      <div class="file">
+        <label for="diagram">Diagrama:</label>
+
+        <input type="file" id="diagram" name="diagram" accept="image/png" />
+      </div>
+      <button type="button" onclick="adicionarItem()">Adicionar</button>
+      <button type="submit">Enviar</button>
+    </form>
+
     <div class="center">
       <button id="gerarDocumento">Gerar Documento</button>
     </div>
